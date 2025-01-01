@@ -4,18 +4,18 @@ import RootLayout from "@/components/layout/RootLayout";
 import { HomePage, NotFoundPage } from "@/components/pages";
 
 export const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <RootLayout />,
-    children: [
-      {
+    {
         path: "/",
-        element: <HomePage />,
-      },
-      {
-        path: "*",
-        element: <NotFoundPage />,
-      },
-    ],
-  },
+        element: <RootLayout />,
+        children: [
+            {
+                path: "/",
+                element: <HomePage />,
+            },
+            {
+                path: "*",
+                element: <NotFoundPage />,
+            },
+        ],
+    },
 ]);
