@@ -18,6 +18,13 @@ const RootLayout = () => {
                     />
                 </div>
             )}
+            <div
+                className="fixed h-screen inset-0 w-full z-20"
+                style={{
+                    backgroundImage:
+                        "linear-gradient(269.54deg, #05060F 0.39%, rgba(5, 6, 15, 0) 35.21%, rgba(5, 6, 15, 0) 64.87%, #05060F 99.6%)",
+                }}
+            ></div>
             <main className="container mx-auto">
                 <Outlet />
             </main>

@@ -3,6 +3,10 @@ module.exports = {
     darkMode: ["class"],
     content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
     theme: {
+        fontFamily: {
+            bankGothic: ["BankGothic", "sans-serif"],
+            robotoMono: ["Roboto Mono", "monospace"],
+        },
         extend: {
             borderRadius: {
                 lg: "var(--radius)",
