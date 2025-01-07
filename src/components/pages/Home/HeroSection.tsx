@@ -5,7 +5,7 @@ const HeroSection = () => {
                 Stay
                 <br /> Immortal!
             </h1>
-            <p className="font-robotoMono up max-w-[503px] mx-auto text-center mt-5">
+            <p className="font-roboto-mono up max-w-[503px] mx-auto text-center mt-5">
                 Endlessly enjoy freedom social with ultimate JellyFish services.
             </p>
 

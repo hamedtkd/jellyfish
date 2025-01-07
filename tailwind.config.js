@@ -5,7 +5,7 @@ module.exports = {
     theme: {
         fontFamily: {
             bankGothic: ["BankGothic", "sans-serif"],
-            robotoMono: ["Roboto Mono", "monospace"],
+            "roboto-mono": ["Roboto-Mono", "monospace"],
         },
         extend: {
             borderRadius: {
