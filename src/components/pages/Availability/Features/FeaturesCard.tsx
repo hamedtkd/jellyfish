@@ -15,7 +15,7 @@ const FeaturesCard = ({
     const formattedDescription = linkifyText(description, wordsToLink);
 
     return (
-        <div className="flex flex-col gap-5 items-center text-center px-4 max-w-[346px]">
+        <div className="flex flex-col gap-5 items-center text-center px-4 max-w-[330px]">
             <GradientIconBox>{icon}</GradientIconBox>
             <p className="text-[#ACCDF2] text-[32px] font-bold text-nowrap">
                 {title}
