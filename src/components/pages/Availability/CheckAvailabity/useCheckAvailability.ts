@@ -35,6 +35,7 @@ const useCheckAvailability = () => {
             await usernameService.checkAvailability(data.username);
             navigate("");
         } catch (error) {
+            console.log(error);
             navigate("");
         } finally {
             setLoading(false);
