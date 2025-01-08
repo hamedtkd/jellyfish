@@ -7,14 +7,7 @@ import { usernameService } from "@/services/api/username.service";
 
 const schema = yup
     .object({
-        username: yup
-            .string()
-            .required("Username is required")
-            .min(3, "Username must be at least 3 characters")
-            .matches(
-                /^[a-zA-Z0-9_-]+$/,
-                "Username can only contain letters, numbers, underscores, and hyphens",
-            ),
+        npub: yup.string().required("Username is required"),
     })
     .required();
 
@@ -29,16 +22,14 @@ const useCheckAvailability = () => {
         resolver: yupResolver(schema),
     });
 
-    const onSubmit = async (data: { username: string }) => {
+    const onSubmit = async (data: { npub: string }) => {
         try {
             setLoading(true);
-            const res = await usernameService.checkAvailability(data.username);
-            navigate(
-                `/set-username?username${data.username}&status=${res.data.data}`,
-            );
+            await usernameService.checkAvailability(data.npub);
+            navigate("");
         } catch (error) {
             console.log(error);
-            //  TODO : add toast
+            navigate("");
         } finally {
             setLoading(false);
         }

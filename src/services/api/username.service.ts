@@ -2,8 +2,7 @@ import { mainApi } from "../../config/axios.config";
 import { ApiResponse } from "../../types/api.types";
 
 export interface UsernameCheckResponse {
-    available: boolean;
-    message: string;
+    status: number | string;
 }
 
 export const usernameService = {
@@ -12,4 +11,6 @@ export const usernameService = {
             `/username/check`,
             username,
         ),
+    getSuggestions: () =>
+        mainApi.get<ApiResponse<string[]>>("/username/suggestions"),
 };

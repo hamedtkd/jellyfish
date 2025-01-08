@@ -5,14 +5,11 @@ import { Textfield } from "@/components/ui/Textfield";
 const CheckAvailabilityForm = () => {
     const { handleSubmit, register, errors } = useCheckAvailability();
     return (
-        <form
-            onSubmit={handleSubmit}
-            className=" space-y-6 max-w-[575px] mx-auto md:px-0 px-4 mt-[50px]"
-        >
+        <form onSubmit={handleSubmit} className=" space-y-6  ">
             <div className="space-y-2">
                 <div className="flex items-center gap-4 animate-fade-up animate-delay-300">
                     <Textfield
-                        className="flex-1"
+                        className="w-full flex-1"
                         {...register("username")}
                         type="text"
                         placeholder="username"
