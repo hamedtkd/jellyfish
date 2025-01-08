@@ -56,8 +56,10 @@ module.exports = {
                 },
             },
             animation: {
-                "shimmer-slide": "shimmer-slide var(--speed) ease-in-out infinite alternate",
-                "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
+                "shimmer-slide":
+                    "shimmer-slide var(--speed) ease-in-out infinite alternate",
+                "spin-around":
+                    "spin-around calc(var(--speed) * 2) infinite linear",
             },
             keyframes: {
                 "spin-around": {
@@ -79,13 +81,11 @@ module.exports = {
                         transform: "translate(calc(100cqw - 100%), 0)",
                     },
                 },
-            }
+            },
         },
     },
     plugins: [
-        function ({
-            addComponents
-        }) {
+        function ({ addComponents }) {
             addComponents({
                 ".container": {
                     maxWidth: "100%",
