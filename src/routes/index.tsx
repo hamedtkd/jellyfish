@@ -4,6 +4,7 @@ import RootLayout from "@/components/layout/RootLayout";
 import { HomePage, NotFoundPage } from "@/components/pages";
 import AvailabilityPage from "@/components/pages/Availability";
 import SetUserName from "@/components/pages/SetUserName";
+import PaymentResult from "@/components/pages/PaymentResult";
 
 export const router = createBrowserRouter([
     {
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
             {
                 path: "/set-username",
                 element: <SetUserName />,
+            },
+            {
+                path: "/payment-result",
+                element: <PaymentResult />,
             },
             {
                 path: "*",
