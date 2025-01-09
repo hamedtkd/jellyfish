@@ -29,6 +29,7 @@ const PaymentResult = () => {
                     </p>
                 </div>
                 <div className="w-full [&_button]:flex-1  flex gap-5  max-w-[729px] mx-auto animate-fade-up animate-delay-700">
+                    {/* TODO: update links */}
                     <Link
                         className={cn(
                             buttonVariants({ variant: "secondary" }),
