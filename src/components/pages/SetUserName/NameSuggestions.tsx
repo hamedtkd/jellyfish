@@ -1,25 +1,14 @@
 import { Skeleton } from "@/components/ui/skeleton";
 import Tag from "@/components/ui/Tag";
+import useFetch from "@/hooks/useFetch";
 import { usernameService } from "@/services/api/username.service";
-import { useEffect, useState } from "react";
 
 const NameSuggestions = () => {
-    const [data, setData] = useState<string[]>();
-    const [loading, setLoading] = useState(false);
-    useEffect(() => {
-        const fetch = async () => {
-            try {
-                setLoading(true);
-                const res = await usernameService.getSuggestions();
-                setData(res.data.data);
-            } catch (error) {
-                console.log(error);
-            } finally {
-                setLoading(false);
-            }
-        };
-        fetch();
-    }, []);
+    const fetchUsernames = () =>
+        usernameService.getSuggestions().then(res => res.data.data);
+
+    const { data, loading } = useFetch(fetchUsernames);
+
     return (
         <div className="space-y-6">
             <h4 className="gradient-text text-xl font-bold">
